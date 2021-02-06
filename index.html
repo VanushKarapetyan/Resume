@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Resume</title>
+	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+	<link rel="stylesheet" href="styles.css">
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+
+	<div class="wrapper">
+		<div class="resume">
+
+			<div class="profile_info">
+				<div class="profile_data">
+					<p class="name">Karapetyan Vanush</p>
+					<span><i class="fas fa-map-marker-alt"></i> Abovyan, Armenia</span>
+				</div>
+			</div>
+
+			<div class="skills">
+				<div class="title">
+					Skills
+				</div>
+				<ul>
+					<li>
+						<div class="skill_item html">
+							<img src="./img/html-img.png" class="html-icon" alt="">
+							<div class="text">HTML</div>
+						</div>
+					</li>
+					<li>
+						<div class="skill_item css">
+							<img src="./img/css-image.png" class="css-icon html-icon" alt="">
+							<div class="text">CSS</div>
+						</div>
+					</li>
+					<li>
+						<div class="skill_item js">
+							<img src="./img/javascript-img.png" class="html-icon" alt="">
+							<div class="text">Javascript</div>
+						</div>
+					</li>
+					<li>
+						<div class="skill_item photoshop">
+							<img src="./img/potoshop-img.png" class="potoshop-icon" alt="">
+							<div class="text">Photoshop</div>
+						</div>
+					</li>
+					<li>
+						<div class="skill_item angular">
+							<img src="./img/angular.png" class="css-icon" alt="">
+							<div class="text">Angular</div>
+						</div>
+					</li>
+					<li>
+						<div class="skill_item angular">
+							<img src="./img/bootstrap.png" class="css-icon" alt="">
+							<div class="text">Bootstrap</div>
+						</div>
+					</li>
+					<li>
+						<div class="skill_item angular">
+							<img src="./img/jquery-img.png" class="html-icon" alt="">
+							<div class="text">Jquery</div>
+						</div>
+					</li>
+					<li>
+						<div class="skill_item angular">
+							<img src="./img/png-transparegithub-img.png" class="github-icon" alt="">
+							<div class="text">Github</div>
+						</div>
+					</li>
+					<li>
+						<div class="skill_item angular">
+							<img src="./img/Figma-img.svg" class="figma-icon" alt="">
+							<div class="text">Figma</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+
+			<div class="full_info_wrap">
+				<div class="tabs">
+					<ul>
+						<li data-li="education" class="active">Education</li>
+						<li data-li="contact">Contact</li>
+					</ul>
+				</div>
+
+				<div class="full_info">
+					<div class="full_info_item education">
+						<div class="title">EDUCATION</div>
+
+						<div class="info_wrap">
+							<ul>
+								<li>
+									<div class="sub_title">
+										2020 august - 2021 february
+									</div>
+
+									<div class="info_item">
+										<div class="info_title">
+
+											Сourses on Front-End programming (Teachme)
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="sub_title">
+										2012 september - 
+										until today
+									</div>
+
+									<div class="info_item">
+										<div class="info_title">
+											Abovian N8 main school
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="full_info_item contact" style="display: none;">
+						<div class="title">CONTACT</div>
+
+						<div class="info_wrap">
+							<ul>
+								<li>
+									<span class="info_q">Email</span>
+									<span class="info_a">vanuskarapetyan186@gmail.com</span>
+								</li>
+								<li>
+									<span class="info_q">Phone</span>
+									<span class="info_a"> +374  93-76-06-85</span>
+								</li>
+								<li>
+									<span class="info_q">Linkedin</span>
+									<span class="info_a">linkedin.com/վանուշ-կարապետյան</span>
+								</li>
+								<li>
+									<span class="info_q">Facebook</span>
+									<span class="info_a">facebook.com/vanush_karapetyan</span>
+								</li>
+								<li>
+									<span class="info_q">Instagram</span>
+									<span class="info_a">instagram.com/vanush_karapetian</span>
+								</li>
+								<li>
+									<span class="info_q">Github</span>
+									<span class="info_a">github.com/VanushKarapetyan</span>
+								</li>
+								
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<script>
+		$(document).ready(function () {
+			$(".full_info_wrap .tabs ul li").click(function () {
+				$(".full_info_wrap .tabs ul li").removeClass("active");
+				$(this).addClass("active");
+
+				var datali = $(this).attr("data-li");
+
+				$(".full_info_item").hide();
+
+				if (datali == "education") {
+					$(".education").show();
+				}
+
+				else if (datali == "contact") {
+					$(".contact").show();
+				}
+				else {
+					console.log("Loding...");
+				}
+			})
+		})
+	</script>
+</body>
+
+</html>
